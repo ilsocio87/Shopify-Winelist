@@ -1,17 +1,16 @@
 import React from 'react';
-import { render } from 'react-dom';
-import Hello from './Hello';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Proute from './helpers/routes/proute';
+import Login from './components/login';
+import App from './components/app';
 
-const styles = {
-  fontFamily: 'sans-serif',
-  textAlign: 'center',
-};
+const Index = () =>
+  <Router>
+    <div>
+      <Route exact path='/' component={Login} />
+      <Proute path='/app' component={App} />
+    </div>
+  </Router>
 
-const App = () => (
-  <div style={styles}>
-    <Hello name="CodeSandbox" />
-    <h2>Start editing to see some magic happen {'\u2728'}</h2>
-  </div>
-);
-
-render(<App />, document.getElementById('root'));
+ReactDOM.render(<Index />, document.getElementById('root'));
