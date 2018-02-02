@@ -5,9 +5,11 @@ import fb from '../firebase/fb'
 const fakeAuth = {
   isAuthenticated: false,
   authenticate(cb) {
-    //if current user
-    this.isAuthenticated = true
-    setTimeout(cb, 100) // fake async
+    if (fb.isLoggedIn()){}
+      this.isAuthenticated = true
+    } else {
+    this.isAuthenticated = false
+    }
   },
   signout(cb) {
     this.isAuthenticated = false

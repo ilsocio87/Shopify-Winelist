@@ -1,9 +1,9 @@
 import firebase from 'firebase';
 
 firebase.initializeApp({
-  apiKey: "AIzaSyDHL6JFTyBcaV60WpE4yXfeO0aZbzA9Xbk",
-  authDomain: "practice-auth.firebaseapp.com",
-  databaseURL: "https://practice-auth.firebaseio.com",
+  apiKey: "",
+  authDomain: "",
+  databaseURL: ""
 })
 
 //add state 
