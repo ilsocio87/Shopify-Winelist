@@ -1,9 +1,11 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
+import fb from '../firebase/fb'
 
 const fakeAuth = {
   isAuthenticated: false,
   authenticate(cb) {
+    //if current user
     this.isAuthenticated = true
     setTimeout(cb, 100) // fake async
   },
